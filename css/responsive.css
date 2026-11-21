@@ -75,10 +75,18 @@
         height: 56px;
         min-height: 56px;
         max-height: 56px;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        background: rgba(11, 14, 20, 0.98);
     }
 
     .navbar {
         height: 56px;
+    }
+
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     .burger {
@@ -89,8 +97,8 @@
         position: fixed;
         top: 56px;
         right: 0;
-        width: 100%;
-        max-width: 320px;
+        width: min(320px, 100%);
+        max-width: 100%;
         height: calc(100vh - 56px);
         background-color: #0d1017;
         border-left: 1px solid var(--border-color);
@@ -99,22 +107,47 @@
         padding: 2.5rem 2rem;
         gap: 1.5rem;
         transform: translateX(100%);
-        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-        box-shadow: -15px 0 30px rgba(0, 0, 0, 0.7);
+        visibility: hidden;
+        pointer-events: none;
+        box-shadow: none;
+        z-index: 1002;
+        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s;
     }
 
     .nav-links.nav-active {
         transform: translateX(0%);
+        visibility: visible;
+        pointer-events: auto;
+        box-shadow: -15px 0 30px rgba(0, 0, 0, 0.7);
     }
 
     .nav-links li {
         width: 100%;
+        max-width: 100%;
     }
 
     .nav-links li a {
         display: block;
         width: 100%;
+        max-width: 100%;
         padding: 12px 18px;
+    }
+
+    .nav-links li a:hover,
+    .nav-links li a.active {
+        box-shadow: none;
+    }
+
+    body.nav-open::before {
+        content: '';
+        position: fixed;
+        inset: 56px 0 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 1001;
+    }
+
+    body.nav-open {
+        overflow-x: hidden;
     }
 
     /* Burger Animation */
@@ -138,6 +171,27 @@
         font-size: 1rem;
     }
 
+    .hero-container,
+    .hero-content,
+    .hero-disciplines,
+    .hero-disciplines + * {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-disciplines {
+        align-items: flex-start;
+    }
+
+    .discipline-item {
+        max-width: 100%;
+    }
+
+    .hero-content .btn-primary,
+    .hero-content .btn-secondary {
+        max-width: 100%;
+    }
+
     .section-title {
         font-size: 2rem;
     }
@@ -156,6 +210,19 @@
 
     .student-works-grid {
         grid-template-columns: 1fr;
+    }
+
+    .welcome-cards-grid,
+    .disciplines-grid,
+    .student-works-grid,
+    .preview-grid,
+    .major-detail-grid,
+    .contact-grid,
+    .mvo-grid,
+    .cards-grid,
+    .grid {
+        width: 100%;
+        max-width: 100%;
     }
 
     .contact-form-card {
@@ -179,8 +246,9 @@
 
     .nav-links {
         top: 56px;
-        height: calc(100vh - 56px);
+        width: 100%;
         max-width: 100%;
+        height: calc(100vh - 56px);
     }
 
     .brand-text {
