@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us – Special Program in the Arts | SRNHS</title>
+    <link rel="icon" type="image/png" href="assets/logo/srnhs-logo.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar" id="navbar">
+                <div class="brand">
+                    <a href="index.html">
+                        <img class="brand-logo brand-logo-snrhs" src="assets/logo/srnhs-logo.png" alt="SNRHS logo" />
+                        <img class="brand-logo brand-logo-spa" src="assets/logo/spa-logo.png" alt="SPA logo" />
+                        <span class="brand-text">SRNHS - SPA</span>
+                    </a>
+                </div>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="majors.html">MAJORS</a></li>
+                    <li><a href="contact.html" class="active">CONTACT</a></li>
+                </ul>
+                <div class="burger" id="burger" aria-label="Toggle menu" role="button">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page 11: Contact Us -->
+        <section class="contact-hero">
+            <div class="container">
+                <span class="section-eyebrow reveal">LET'S CONNECT</span>
+                <h1 class="section-title reveal delay-100">CONTACT US</h1>
+                <p class="section-subtitle reveal delay-200">Questions, feedback, or messages about the program</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Left Column: Info Details -->
+                    <div class="contact-info-col reveal">
+                        <h3>Keep the creativity going.</h3>
+                        <p>school's official contact details and social media pages information.</p>
+
+                        <div class="contact-details-list">
+                            <div class="contact-detail-item">
+                                <span class="contact-label">SCHOOL</span>
+                                <span class="contact-val">SPECIAL PROGRAM IN THE ARTS</span>
+                            </div>
+
+                            <div class="contact-detail-item">
+                                <span class="contact-label">EMAIL</span>
+                                <span class="contact-val"><a href="mailto:specialprograminthearts@gmail.com">SPECIAL PROGRAM IN THE ARTS @GMAIL.COM</a></span>
+                            </div>
+
+                            <div class="contact-detail-item">
+                                <span class="contact-label">CONTACT</span>
+                                <span class="contact-val"><a href="tel:09123456789">09123456789</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Interactive Form -->
+                    <div class="contact-form-card reveal delay-200">
+                        <h4>SEND US A MESSAGE</h4>
+                        <div id="formAlert" class="form-alert" role="alert"></div>
+
+                        <form id="contactForm" novalidate>
+                            <div class="form-group">
+                                <label for="name">NAME</label>
+                                <input type="text" id="name" class="form-control" placeholder="Your name" required />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">EMAIL</label>
+                                <input type="email" id="email" class="form-control" placeholder="Your email" required />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">MESSAGE</label>
+                                <textarea id="message" class="form-control" placeholder="Write your message here" rows="5" required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-primary" style="width: 100%;">SEND MESSAGE</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">San Rafael National High School – SPA</div>
+            <p class="footer-copy">&copy; 2026 San Rafael National High School – Special Program in the Arts. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

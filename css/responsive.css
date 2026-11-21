@@ -1,0 +1,203 @@
+/* ==========================================================================
+   SPA-Portfolio: Responsive Media Queries
+   (css/responsive.css)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .hero-disciplines {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+        background: rgba(18, 22, 31, 0.7);
+        padding: 1.25rem;
+        border-radius: var(--radius-md);
+        border: 1px solid var(--border-color);
+    }
+
+    .discipline-item {
+        font-size: 1.05rem;
+        padding-right: 1.2rem;
+    }
+
+    .welcome-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .disciplines-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .mvo-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .mvo-emblem-wrap {
+        margin: 0 auto;
+    }
+
+    .mvo-block h3 {
+        justify-content: center;
+    }
+
+    .objectives-list {
+        text-align: left;
+    }
+
+    .major-detail-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile Navigation Drawer */
+    header {
+        height: 56px;
+        min-height: 56px;
+        max-height: 56px;
+    }
+
+    .navbar {
+        height: 56px;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 56px;
+        right: 0;
+        width: 100%;
+        max-width: 320px;
+        height: calc(100vh - 56px);
+        background-color: #0d1017;
+        border-left: 1px solid var(--border-color);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2.5rem 2rem;
+        gap: 1.5rem;
+        transform: translateX(100%);
+        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: -15px 0 30px rgba(0, 0, 0, 0.7);
+    }
+
+    .nav-links.nav-active {
+        transform: translateX(0%);
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links li a {
+        display: block;
+        width: 100%;
+        padding: 12px 18px;
+    }
+
+    /* Burger Animation */
+    .burger.toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .burger.toggle .line2 {
+        opacity: 0;
+    }
+
+    .burger.toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .hero-content h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .welcome-cards-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    .disciplines-grid {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+        margin: 0 auto 4rem;
+    }
+
+    .student-works-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form-card {
+        padding: 1.75rem;
+    }
+
+    .contact-info-col h3 {
+        font-size: 2rem;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        height: 56px;
+    }
+
+    .nav-links {
+        top: 56px;
+        height: calc(100vh - 56px);
+        max-width: 100%;
+    }
+
+    .brand-text {
+        font-size: 0.95rem;
+    }
+
+    .hero {
+        padding: 3rem 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%;
+    }
+
+}
+
