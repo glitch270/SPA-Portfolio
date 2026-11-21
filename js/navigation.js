@@ -8,6 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.getElementById('nav-links');
     const header = document.querySelector('header');
 
+    if (burger) {
+        burger.setAttribute('aria-expanded', 'false');
+    }
+
     const closeMenu = () => {
         if (!navLinks) return;
         navLinks.classList.remove('nav-active');
