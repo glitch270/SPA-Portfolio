@@ -962,6 +962,13 @@ textarea.form-control {
 }
 
 /* ---------------- Footer ---------------- */
+.photo-credit {
+    padding: 1rem 0;
+    color: #ffffff;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
 footer {
     margin-top: auto;
     background-color: #080a0f;
